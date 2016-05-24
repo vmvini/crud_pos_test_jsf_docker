@@ -7,6 +7,7 @@ package ifpb.pos.dao;
 
 import ifpb.pos.Pessoa;
 import java.util.List;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -14,7 +15,9 @@ import javax.persistence.PersistenceContext;
  *
  * @author Antônio
  */
-public class Dao {
+
+@Stateless
+public class PessoaService {
     @PersistenceContext(name = "pos-jsf-crud")
     EntityManager em;
     

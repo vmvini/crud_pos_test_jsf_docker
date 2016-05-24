@@ -5,21 +5,23 @@
  */
 package controladores;
 
-import javax.ejb.EJB;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import ifpb.pos.Pessoa;
+import ifpb.pos.dao.PessoaService;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 /**
  *
  * @author marcelo
  */
-@ManagedBean(name = "gerenciadorPessoa")
-@SessionScoped
+@Named
+@RequestScoped
 public class GerenciadorPessoa {
         
-    @EJB
-    PessoaService pessoaService;
-    Pessoa pessoa;
+    @Inject
+    private PessoaService pessoaService;
+    private Pessoa pessoa;
     
     public GerenciadorPessoa() {
         this.pessoa = new Pessoa();
