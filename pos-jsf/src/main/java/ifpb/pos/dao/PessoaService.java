@@ -22,7 +22,7 @@ public class PessoaService {
     EntityManager em;
     
     public void salvar(Pessoa pessoa){
-    em.persist(pessoa);
+        em.persist(pessoa);
     }
     
     public List<Pessoa> listarTodas(){
