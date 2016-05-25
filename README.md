@@ -1,6 +1,8 @@
 # crud_pos_test_jsf_docker
 O projeto funcionando com a imagem do postgres e do glassfish está na BRANCH bFuncionando;
 
+Não esqueça de fazer : mvn clean install para gerar a target.
+
 # OBSERVAÇÕES:
 1- Por alguma razão, o jpa NAO ta criando a tabela no banco automaticamente.
 O sistema conecta no container do postgre com sucesso, mas no momento de salvar uma pessoa, dá erro.
